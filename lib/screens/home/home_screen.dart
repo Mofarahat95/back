@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_2/Theming/light_theme.dart';
 import 'package:islami_2/screens/home/tabs/ahadeth_tab.dart';
 import 'package:islami_2/screens/home/tabs/quran_tab.dart';
 import 'package:islami_2/screens/home/tabs/radio_tab.dart';
@@ -37,17 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         Scaffold(
-          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            centerTitle: true,
-            backgroundColor: Colors.transparent,
             title: Text(
-              'Islami',
-              style: GoogleFonts.elMessiri(
-                fontSize: 30,
-                color: Color(0xff242424),
-                fontWeight: FontWeight.bold,
-              ),
+              'Islami'.tr(),
+              style:Theming.bodyreg(),
             ),
           ),
           body: tabs[selectedindex],
