@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami_2/Theming/App_Colors.dart';
 import 'package:islami_2/models/sura_model.dart';
 import 'package:islami_2/providers/sura_provider.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,7 @@ class SuraDetails extends StatelessWidget {
           return Container(
             decoration: BoxDecoration(
                 image:
-                    DecorationImage(image: AssetImage('assets/images/bg.png'))),
+                    DecorationImage(image: AssetImage('assets/images/bg.png'),fit: BoxFit.cover)),
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.transparent,
@@ -48,7 +49,7 @@ class SuraDetails extends StatelessWidget {
                       style: GoogleFonts.elMessiri(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
-                        color: Color(0xff242424),
+                        color: AppColors.primaryColor,
                         wordSpacing: 4,
                       ),
                     ),
